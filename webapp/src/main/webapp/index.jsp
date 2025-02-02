@@ -1,7 +1,7 @@
 
 <form action="action_page.php">
     <div class="container">
-      <h1>New user Register for DevOps Learning</h1>
+      <h1>New user Register for Terraform Learning Clourse</h1>
       <p>Please fill in this form to create an account.</p>
       <hr>
        
@@ -11,10 +11,6 @@
       
       <label for="mobile"><b>Enter mobile</b></label>
       <input type="text" placeholder="Enter moible number" name="mobile" id="mobile" required>
-      <br>
-
-      <label for="PAN"><b>Enter PAN No</b></label>
-      <input type="text" placeholder="Enter PAN" name="PAN" id="PAN" required>
       <br>
       
       <label for="email"><b>Enter Email</b></label>
