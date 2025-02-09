@@ -10,8 +10,11 @@ pipeline {
 
         stage('Compile Package') {
             steps {
-                def mvnHome = tool name: 'maven-3', type: 'maven'
-                sh "${mvnHome}/bin/mvn package"
+                script {
+                    // This makes sure the tool is available inside the stage
+                    def mvnHome = tool name: 'maven-3', type: 'maven'
+                    sh "${mvnHome}/bin/mvn package"
+                }
             }
         }
     }
