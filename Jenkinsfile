@@ -26,5 +26,10 @@ Thanks
 Pulak''', cc: '', from: '', replyTo: '', subject: 'Jenkins Job', to: 'kar.pulakk@gmail.com'
             }
         }
+        stage('Slack Notification') {
+            steps {
+               slackSend channel: 'jenkins-pipeline-demp', color: 'good', message: 'This is Jenkins slack Demo', tokenCredentialId: 'slack-demo'
+            }
+        }
     }
 }
