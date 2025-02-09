@@ -17,5 +17,14 @@ pipeline {
                 }
             }
         }
+         stage('Email Notification') {
+            steps {
+                mail bcc: '', body: '''Hi,
+Welcome Jenkins Job Alert.
+
+Thanks 
+Pulak''', cc: '', from: '', replyTo: '', subject: 'Jenkins Job', to: 'kar.pulakk@gmail.com'
+            }
+        }
     }
 }
