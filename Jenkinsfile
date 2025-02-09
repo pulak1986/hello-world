@@ -28,7 +28,7 @@ Pulak''', cc: '', from: '', replyTo: '', subject: 'Jenkins Job', to: 'kar.pulakk
         }
         stage('Slack Notification') {
             steps {
-               slackSend channel: 'jenkins-pipeline-demp', color: 'good', message: 'This is Jenkins slack Demo', tokenCredentialId: 'slack-demo'
+               slackSend baseUrl: 'https://hooks.slack.com/services/', channel: 'jenkins-pipeline-demp', color: 'good', message: 'This is Jenkins slack Demo', teamDomain: 'Academic', tokenCredentialId: 'slack-demo'
             }
         }
     }
