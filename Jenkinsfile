@@ -17,6 +17,15 @@ pipeline {
                 }
             }
         }
+        stage('Deploy to Tomcat') {
+            steps {
+                script {
+                sshagent(['tomcat-dev']) {
+                 sh 'scp -o StrictHostKeyChecking=no -l target/* ec2-user@172.31.91.253:/opt/tomcat-9/webapps/'
+                 }
+                }
+            }
+        }
          stage('Email Notification') {
             steps {
                 mail bcc: '', body: '''Hi,
